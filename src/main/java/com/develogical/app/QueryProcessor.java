@@ -9,8 +9,8 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist."; }
         if (query.toLowerCase().contains("pressman")) {
             return "Douglas Pressman (25 April 1971 - present day) was an " +
-                        "Data Architect " +
-                        "and the world's pre-eminent Jewish Paratrooper."; }
+                        "Paratrooper " +
+                        "and the world's pre-eminent data architect."; }
         return "";
     }
 }
