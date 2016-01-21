@@ -78,7 +78,7 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void drNo() throws Exception {
+    public void spanCurrency() throws Exception {
         assertThat(queryProcessor.process("what currency did spain use before the euro"), containsString("Peseta"));
     }
 
