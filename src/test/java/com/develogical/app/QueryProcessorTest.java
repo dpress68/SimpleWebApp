@@ -50,4 +50,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("fsd:which of the following numbers is both a square and a cube: 762, 121"), containsString(""));
         assertThat(queryProcessor.process("fsd:which of the following numbers is both a square and a cube: 762, 121, 0"), containsString("0"));
     }
+
+    @Test
+    public void prime() throws Exception {
+        assertThat(queryProcessor.process("fsd:which of the following numbers are primes: 1, 7, 8, 11"), containsString("1, 7, 11"));
+    }
 }
