@@ -30,11 +30,13 @@ public class QueryProcessor {
             Collections.sort(integers);
             return String.valueOf(integers.get(integers.size() - 1 ));
         }
-        /*
+
         if(query.toLowerCase().contains("what is")){
-            query.substring(query.indexOf("what is"));
+            String substring = query.substring(query.indexOf("what is ") + "what is ".length());
+            String[] split = substring.trim().split("plus");
+            return "" + (Integer.valueOf(split[0].trim()) + Integer.valueOf(split[1].trim()));
         }
-        */
+
         return "";
     }
 }

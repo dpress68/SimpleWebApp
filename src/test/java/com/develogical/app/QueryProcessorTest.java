@@ -29,4 +29,9 @@ public class QueryProcessorTest {
     public void knowsAboutPressman() throws Exception {
         assertThat(queryProcessor.process("pressman"), containsString("Paratrooper"));
     }
+
+    @Test
+    public void additions() throws Exception {
+        assertThat(queryProcessor.process("what is 2000 plus 200"), containsString("2200"));
+    }
 }
