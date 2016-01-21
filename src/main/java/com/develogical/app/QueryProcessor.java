@@ -75,6 +75,10 @@ public class QueryProcessor {
             return "yellow";
         }
 
+        if (query.toLowerCase().contains("which city is the eiffel tower in")) {
+            return "Paris";
+        }
+
         return "";
     }
 

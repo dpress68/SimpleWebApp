@@ -60,4 +60,9 @@ public class QueryProcessorTest {
     public void banana() throws Exception {
         assertThat(queryProcessor.process("what colour is a banana"), containsString("yellow"));
     }
+
+    @Test
+    public void eiffelTower() throws Exception {
+        assertThat(queryProcessor.process("which city is the Eiffel tower in"), containsString("Paris"));
+    }
 }
