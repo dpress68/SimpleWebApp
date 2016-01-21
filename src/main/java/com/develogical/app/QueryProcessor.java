@@ -71,6 +71,9 @@ public class QueryProcessor {
             String[] split = substring.trim().split("multiplied by");
             return "" + (Integer.valueOf(split[0].trim()) * Integer.valueOf(split[1].trim()));
         }
+        if (query.toLowerCase().contains("what colour is a banana")) {
+            return "yellow";
+        }
 
         return "";
     }

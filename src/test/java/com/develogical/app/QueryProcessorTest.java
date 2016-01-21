@@ -55,4 +55,9 @@ public class QueryProcessorTest {
     public void prime() throws Exception {
         assertThat(queryProcessor.process("fsd:which of the following numbers are primes: 1, 7, 8, 11"), containsString("1, 7, 11"));
     }
+
+    @Test
+    public void banana() throws Exception {
+        assertThat(queryProcessor.process("what colour is a banana"), containsString("yellow"));
+    }
 }
