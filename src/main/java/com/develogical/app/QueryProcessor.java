@@ -91,6 +91,11 @@ public class QueryProcessor {
             return "Paris";
         }
 
+        if (query.toLowerCase().contains("what currency did spain use before the euro")) {
+            return "Paris";
+        }
+
+
         return "";
     }
 

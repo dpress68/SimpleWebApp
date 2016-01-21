@@ -76,4 +76,10 @@ public class QueryProcessorTest {
     public void drNo() throws Exception {
         assertThat(queryProcessor.process("who played james bond in the film dr no"), containsString("Sean Connery"));
     }
+
+    @Test
+    public void drNo() throws Exception {
+        assertThat(queryProcessor.process("what currency did spain use before the euro"), containsString("Peseta"));
+    }
+
 }
