@@ -32,7 +32,7 @@ public class QueryProcessor {
                     return String.valueOf(value);
                 }
             }
-            return null;
+            return "";
         }
 
         if (query.toLowerCase().contains("which of the following numbers")) {
