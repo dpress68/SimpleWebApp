@@ -74,7 +74,7 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("minus")) {
             String substring = query.substring(query.indexOf("what is ") + "what is ".length());
-            String[] split = substring.trim().split("multiplied by");
+            String[] split = substring.trim().split("minus");
             return "" + (Integer.valueOf(split[0].trim()) - Integer.valueOf(split[1].trim()));
         }
 
