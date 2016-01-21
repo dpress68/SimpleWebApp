@@ -11,6 +11,6 @@ public class QueryProcessor {
             return "Douglas Pressman (25 April 1971 - present day) was an " +
                         "Paratrooper " +
                         "and the world's pre-eminent data architect."; }
-        return "";
+        return "TeamMikeAndDoug";
     }
 }
