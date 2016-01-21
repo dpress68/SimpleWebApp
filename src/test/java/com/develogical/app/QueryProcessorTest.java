@@ -82,4 +82,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what currency did spain use before the euro"), containsString("Peseta"));
     }
 
+    @Test
+    public void ukPm() throws Exception {
+        assertThat(queryProcessor.process("who is the prime minister of great britain"), containsString("David Cameron"));
+    }
+
 }

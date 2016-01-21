@@ -92,7 +92,11 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("what currency did spain use before the euro")) {
-            return "Paris";
+            return "Peseta";
+        }
+
+        if (query.toLowerCase().contains("who is the prime minister of great britain")) {
+            return "David Cameron";
         }
 
 
