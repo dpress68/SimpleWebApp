@@ -21,6 +21,20 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("what is your name")) {
             return "TeamMikeAndDoug";
         }
+        if (query.toLowerCase().contains("which of the following numbers is both a square and a cube")) {
+            String[] split = query.split(":")[2].split(",");
+            List<Integer> integers = new ArrayList<>();
+            for(String part : split){
+                int value = Integer.parseInt(part.trim());
+                double sqrt = Math.sqrt(value);
+                double cbrt = Math.cbrt(value);
+                if(sqrt % 1 == 0 && cbrt % 1 == 0){
+                    return String.valueOf(value);
+                }
+            }
+            return null;
+        }
+
         if (query.toLowerCase().contains("which of the following numbers")) {
             String[] split = query.split("largest:")[1].split(",");
             List<Integer> integers = new ArrayList<>();
@@ -31,7 +45,8 @@ public class QueryProcessor {
             return String.valueOf(integers.get(integers.size() - 1 ));
         }
 
-        if(query.toLowerCase().contains("what is")){
+
+        if(query.toLowerCase().contains("what is") && query.toLowerCase().contains("plus")){
             String substring = query.substring(query.indexOf("what is ") + "what is ".length());
             String[] split = substring.trim().split("plus");
             return "" + (Integer.valueOf(split[0].trim()) + Integer.valueOf(split[1].trim()));
