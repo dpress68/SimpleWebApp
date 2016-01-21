@@ -1,5 +1,9 @@
 package com.develogical.app;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class QueryProcessor {
 
     public String process(String query) {
@@ -16,6 +20,15 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("what is your name")) {
             return "TeamMikeAndDoug";
+        }
+        if (query.toLowerCase().contains("which of the following numbers")) {
+            String[] split = query.split("largest:")[1].split(",");
+            List<Integer> integers = new ArrayList<>();
+            for(String part : split){
+                integers.add(Integer.valueOf(part.trim()));
+            }
+            Collections.sort(integers);
+            return String.valueOf(integers.get(integers.size() - 1 ));
         }
         return "";
     }
