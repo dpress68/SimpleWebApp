@@ -6,11 +6,17 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
                     "English poet, playwright, and actor, widely regarded as the greatest " +
-                    "writer in the English language and the world's pre-eminent dramatist."; }
+                    "writer in the English language and the world's pre-eminent dramatist.";
+        }
         if (query.toLowerCase().contains("pressman")) {
             return "Douglas Pressman (25 April 1971 - present day) was an " +
-                        "Paratrooper " +
-                        "and the world's pre-eminent data architect."; }
-        return "TeamMikeAndDoug";
+                    "Paratrooper " +
+                    "and the world's pre-eminent data architect.";
+        }
+
+        if (query.toLowerCase().contains("what is your name")) {
+            return "TeamMikeAndDoug";
+        }
+        return "";
     }
 }
