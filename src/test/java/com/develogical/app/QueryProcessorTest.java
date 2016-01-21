@@ -36,7 +36,7 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void additions() throws Exception {
+    public void subs() throws Exception {
         assertThat(queryProcessor.process("what is 10 minus 4"), containsString("6"));
     }
 
